@@ -7,6 +7,8 @@ LINK_DIRECTORIES(${GTK3_LIBRARY_DIRS})
 
 ADD_DEFINITIONS(${GTK3_CFLAGS_OTHER})
 
+set (CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR})
+
 add_executable(gtk-vis "drawing.c")
 
 target_link_libraries(gtk-vis ${GTK3_LIBRARIES} neat-o)
