@@ -23,6 +23,7 @@ set(HDRS
 )
 
 add_library(${PROJECT_NAME} ${SRCS} ${HDRS})
+set_property(TARGET ${PROJECT_NAME} PROPERTY C_STANDARD 99)
 target_link_libraries(${PROJECT_NAME} m)
 
 if(${with_example})

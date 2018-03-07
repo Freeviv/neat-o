@@ -10,5 +10,6 @@ ADD_DEFINITIONS(${GTK3_CFLAGS_OTHER})
 set (CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR})
 
 add_executable(gtk-vis "drawing.c")
+set_property(TARGET gtk-vis PROPERTY C_STANDARD 99)
 
 target_link_libraries(gtk-vis ${GTK3_LIBRARIES} neat-o)
